@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Quilt do
-  let(:photos) { Array.new(30) { Photo.new }}
+  let(:photos) { Array.new(30) { Photo.new } }
   subject { Quilt.new(photos) }
 
   describe "#photos" do
@@ -9,4 +9,7 @@ describe Quilt do
       subject.photos.should == photos
     end
   end
+
+  describe "#number_of_columns"
+  describe "#columns"
 end

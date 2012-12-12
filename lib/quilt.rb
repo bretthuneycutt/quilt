@@ -1,10 +1,9 @@
 class Quilt
   attr_reader :photos
 
-  def initialize
-    @photos = []
-    30.times do
-      @photos << Photo.new
-    end
+  NUMBER_OF_PHOTOS = 30
+
+  def initialize(photos = nil)
+    @photos = photos || Array.new(NUMBER_OF_PHOTOS) { Photo.new }
   end
 end

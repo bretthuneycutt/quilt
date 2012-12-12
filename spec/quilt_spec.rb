@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe Quilt do
-  subject { Quilt.new }
+  let(:photos) { Array.new(30) { Photo.new }}
+  subject { Quilt.new(photos) }
 
   describe "#photos" do
-    it "returns an Array of 30 photos" do
-      subject.photos.should be_a(Array)
-      subject.photos.size.should == 30
+    it "returns an array of photos" do
+      subject.photos.should == photos
     end
   end
 end
